@@ -1,3 +1,4 @@
+# coding: utf-8
 module Paperclip
   module Storage
     # Amazon's S3 file hosting service is a scalable, easy place to store files for
@@ -433,7 +434,7 @@ module Paperclip
       def find_credentials(creds)
         case creds
         when File
-          load_credentials_from_file(creds.path)
+           load_credentials_from_file(creds.path)
         when String, Pathname
           load_credentials_from_file(creds)
         when Hash
